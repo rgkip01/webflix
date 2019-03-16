@@ -1,0 +1,8 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: rafael
+  password: 123123123
+development:
+  <<: *default
+  database: webflix_development
