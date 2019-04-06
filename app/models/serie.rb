@@ -1,4 +1,5 @@
 class Serie < ApplicationRecord
+  include Highlightable
   include PgSearch
   multisearchable against: [:title]
   belongs_to :category
@@ -8,5 +9,5 @@ class Serie < ApplicationRecord
   belongs_to :last_watched_episode, class_name: 'Movie', optional: true
   validates :title, presence: true
   validates :description, presence: true
-  validates :thumbnail_key, presence: true 
+  validates :thumbnail_key, presence: true
 end
