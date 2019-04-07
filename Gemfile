@@ -2,7 +2,8 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.4.1'
-
+# vue.js
+gem 'webpacker'
 #Authentication
 gem 'devise'
 #Serializer return of Json
