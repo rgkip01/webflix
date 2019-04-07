@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      get '/dashboard', to: 'dashboard#index', as: 'dashboard'
+      get '/dashboards', to: 'dashboards#index', as: 'dashboard'
       resources :favorites, path: 'my_list', only: [:index, :create]
       delete '/my_list/:type/:id', to: 'favorites#destroy'
       resources :reviews, only: [:index, :create]

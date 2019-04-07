@@ -1,4 +1,4 @@
-class Api::V1::DashboardController < ApplicationController
+class Api::V1::DashboardsController < ApplicationController
   def index
     type_params and (return if performed?)
     result = DashboardService.new(params[:type], current_user).perform

@@ -1,6 +1,6 @@
 class DashboardService
 
-  def initializer(type, user)
+  def initialize(type, user)
     @type = type
     @user = user
   end
@@ -16,9 +16,9 @@ class DashboardService
     Api::V1::CategorySerializer.new(categories)
   end
 
-  def group_by_watching
+  def group_by_keep_watching
     @players = Player.includes(:movie).where(end_date: nil, user: @user)
-    Api::V1::MovieSerializer.new(players.map(&:movie))
+    Api::V1::MovieSerializer.new(@players.map(&:movie))
   end
 
   def group_by_highlight

@@ -17,7 +17,7 @@ class Api::V1::SerieSerializer
   end
 
   attribute :review_count do |object|
-    object.review.count
+    object.reviews.count
   end
 
   attribute :favorite do |object, params|

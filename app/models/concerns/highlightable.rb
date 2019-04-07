@@ -9,7 +9,7 @@ module Highlightable
       any_entity ||= has_any_orther_highlighted?(Serie) unless any_entity
 
       if highlighted && any_entity
-        erros.add(:single_highlight, 'Only one highlighted entity is permitted' )
+        errors.add(:single_highlight, 'Only one highlighted entity is permitted' )
       end
     end
 

@@ -15,7 +15,7 @@ class Api::V1::MovieSerializer
   end
 
   attribute :favorite do |object, params|
-    if params.present? && params.has_key(:user)
+    if params.present? && params.has_key?(:user)
       params[:user].favorites.where(favoritable: object).exists?
     end
   end

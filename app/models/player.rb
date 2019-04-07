@@ -1,11 +1,11 @@
 class Player < ApplicationRecord
   belongs_to :movie
   belongs_to :user
-  before_create :set_star_date
+  before_create :set_start_date
 
   private
 
-    def set_star_date
-      self.star_date ||= Time.zone.now
+    def set_start_date
+      self.start_date ||= Time.zone.now
     end
 end
