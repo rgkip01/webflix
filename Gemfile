@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.4.1'
+# AWS
+gem 'aws-sdk-s3'
 # vue.js
 gem 'webpacker'
 #Authentication
