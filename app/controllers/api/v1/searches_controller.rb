@@ -10,5 +10,6 @@ class Api::V1::SearchesController < ApplicationController
   def check_search_value
     if params[:value].present? && params[:value].length < 3
       render json: {errors: "Parameter :value must have at least 3 characters"}
+    end
   end
 end
