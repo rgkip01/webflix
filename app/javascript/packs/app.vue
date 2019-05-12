@@ -1,22 +1,25 @@
 <template>
-  <div id="app">
-    <p>{{ message }}</p>
-  </div>
+  <v-app> // compenente obrigatório do vuetify
+    <h4 class='white--text'>Header Component</h4>
+    <v-content> // envolve o conteúdo da página (seria o yeld do rails)
+      <h4 class='white--text'>Main Component</h4>
+    </v-content>
+    <h4 class='white--text'>Footer Component</h4>
+  </v-app>
 </template>
 
 <script>
-export default {
-  data: function () {
-    return {
-      message: "Hello Vue! :)"
+  export default {
+    data (){
+      return {
+
+      }
     }
   }
-}
 </script>
 
-<style scoped>
-p {
-  font-size: 2em;
-  text-align: center;
-}
+<style>
+  #app {
+    background-color: #0c0c0c !important;
+  }
 </style>
